@@ -50,8 +50,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal" >
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -95,8 +94,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -139,8 +137,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -184,8 +181,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -229,8 +225,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -274,8 +269,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -319,8 +313,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -363,8 +356,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -408,8 +400,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
@@ -452,8 +443,7 @@
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/_5sdp">
+                        android:orientation="horizontal">
 
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
