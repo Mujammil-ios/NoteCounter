@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/view_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/layout_toolbar"
+                layout="@layout/layout_toolbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space50"
+                android:layout_marginBottom="@dimen/space30"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/zero"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:id="@+id/finalResult"
+                    />
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/two_thoudsnd" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/two_thousands_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/two_thusand"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/thousandsEqual"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/final_two_thousand_result_tv"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/five_hundrade" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/five_hundrade_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/five_hundrade"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/five_hundrade_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/final_five_hundrade_result"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/two_hundrade" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/two_hundrade_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/two_hundrade"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/two_hundrade_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/final_two_hundrade_result"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/hundrade_one" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/one_hundrade_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/one_hundrade"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/one_hundrade_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/final_one_hundrade_result"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/fifty_one" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/fifty_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/fifty"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/fifty_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/final_fifty_result"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/twenty" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/twenty_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/twenty"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/twenty_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/twenty_result"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/ten_one" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/ten_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/ten"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/ten_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/ten_result"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/five" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/five_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/five"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/five_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/final_five_result"
+                            />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/two" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/two_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/two"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/two_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/two_result"
+                            />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_45sdp"
+                            android:src="@drawable/one" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/one_et"
+                            android:layout_height="wrap_content"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/one"
+                            android:background="@drawable/rounded_edittext"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:padding="@dimen/space3"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:text="@string/equal"
+                            android:textSize="@dimen/_12ssp"
+                            android:id="@+id/one_equal"
+                            />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:id="@+id/final_one_result"
+                            />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

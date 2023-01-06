@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">KGN Marketing</string>
+    <string name="msg_install_google_maps">Install google map</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="equal">=</string>
+    <string name="two_thusand">2000</string>
+    <string name="five_hundrade">500</string>
+    <string name="two_hundrade">200</string>
+    <string name="one_hundrade">100</string>
+    <string name="fifty">50</string>
+    <string name="twenty">20</string>
+    <string name="ten">10</string>
+    <string name="five">5</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="zero">0 ₹</string>
+    <string name="forgot_password">Forgot Password</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- number picker -->
+    <attr name="NumberPickerStyle" format="reference"/>
+    <declare-styleable name="NumberPickerStyle">
+        <attr name="np_width" format="dimension"/>
+        <attr name="np_height" format="dimension"/>
+        <attr name="np_dividerColor" format="color"/>
+        <attr name="np_dividerDistance" format="dimension"/>
+        <attr name="np_dividerThickness" format="dimension"/>
+        <attr name="np_formatter" format="string"/>
+        <attr name="np_max" format="integer"/>
+        <attr name="np_min" format="integer"/>
+        <attr name="np_orientation" format="enum">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <attr name="np_textColor" format="color"/>
+        <attr name="np_textSize" format="dimension"/>
+        <attr name="np_typeface" format="string"/>
+    </declare-styleable>
+
+    <!-- card edittext -->
+    <declare-styleable name="CardEditTextStyle">
+        <attr name="cet_separator" format="enum">
+            <enum name="no_separator" value="0"/>
+            <enum name="spaces" value="1"/>
+            <enum name="dashes" value="2"/>
+        </attr>
+        <attr name="cet_disabledCards">
+            <flag name="unknown" value="0"/>
+            <flag name="visa" value="1"/>
+            <flag name="mastercard" value="2"/>
+            <flag name="amex" value="3"/>
+            <flag name="discover" value="4"/>
+            <flag name="diners" value="5"/>
+            <flag name="jcb" value="6"/>
+        </attr>
+        <attr name="cet_drawableGravity">
+            <enum name="start" value="0"/>
+            <enum name="end" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+    </declare-styleable>
+
+    <!-- expandable layout -->
+    <declare-styleable name="ExpandableItemStyle">
+        <attr name="exp_expandableItemStyle" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ExpandableLayoutStyle">
+        <attr name="exp_layoutHeader" format="reference"/>
+        <attr name="exp_layoutContent" format="reference"/>
+    </declare-styleable>
+
+    <!-- Rounded FrameLayout -->
+    <declare-styleable name="RoundCornerLayout">
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="topEnabled" format="boolean"/>
+        <attr name="bottomEnabled" format="boolean"/>
+        <attr name="topLeftEnabled" format="boolean"/>
+        <attr name="topRightEnabled" format="boolean"/>
+        <attr name="bottomLeftEnabled" format="boolean"/>
+        <attr name="bottomRightEnabled" format="boolean"/>
+    </declare-styleable>
+
+    <!-- Masked EditText for PhoneNumber validation -->
+    <declare-styleable name="MaskedEditText">
+        <attr name="mask" format="string"/>
+        <attr name="notMaskedSymbol" format="string"/>
+        <attr name="replacementChar" format="string"/>
+        <attr name="deleteChar" format="string"/>
+        <attr name="format" format="string"/>
+        <attr name="maskIcon" format="reference"/>
+        <attr name="maskIconColor" format="reference"/>
+        <attr name="android:inputType"/>
+    </declare-styleable>
+
+    <!-- EditText for currency -->
+    <declare-styleable name="EasyMoneyWidgets">
+        <attr name="currency_symbol" format="string"/>
+        <attr name="show_currency" format="boolean"/>
+        <attr name="show_commas" format="boolean"/>
+    </declare-styleable>
+</resources>

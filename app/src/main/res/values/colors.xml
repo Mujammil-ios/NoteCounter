@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/theme</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/theme</color>
+
+    <color name="theme">#262262</color>
+    <color name="theme_gray1">#333333</color>
+    <color name="theme_gray2">#F5F5F5</color>
+    <color name="theme_gray3">#96979A</color>
+    <color name="divider">#DADADA</color>
+    <color name="toolbar">#1E1D2E</color>
+    <color name="tab_bg">#3D3C4D</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent">#90FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_transparent">#80000000</color>
+    <color name="green">#2eaf4d</color>
+    <color name="red">#ff1744</color>
+    <color name="sky">#06A1CE</color>
+    <color name="gray">#D9D9D9</color>
+    <color name="orange">#FFA500</color>
+</resources>

@@ -1,0 +1,132 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- TextView -->
+    <style name="TextView_black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_gray1</item>
+        <item name="android:textColorHint">@color/theme_gray1</item>
+        <item name="android:textSize">@dimen/text10</item>
+
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+    </style>
+
+    <!-- Button -->
+    <style name="Button_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_big_height</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/btn_text</item>
+        <item name="android:background">@drawable/btn_bg_theme</item>
+        <item name="android:stateListAnimator" tools:targetApi="21">@null</item>
+
+        <item name="android:fontFamily">@font/font_opensans_semibold</item>
+    </style>
+
+    <!-- EditText -->
+    <!-- edittext - white theme to change line color -->
+    <style name="EditText_theme">
+        <item name="colorControlNormal">@color/theme_gray1</item>
+        <item name="colorControlActivated">@color/theme_gray1</item>
+        <item name="colorControlHighlight">@color/theme_gray1</item>
+    </style>
+
+    <style name="TextInputLayout_error">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/tip_text</item>
+
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+    </style>
+
+    <style name="TextInputLayout_hint">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_gray1</item>
+        <item name="android:textColorHint">@color/theme_gray1</item>
+        <item name="android:textSize">@dimen/tip_text</item>
+        <item name="android:padding">@dimen/space2</item>
+
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/et_height</item>
+        <item name="android:textColor">@color/theme</item>
+        <item name="android:textColorHint">@color/theme_gray1</item>
+        <item name="android:textSize">@dimen/et_text</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:padding">@dimen/space5</item>
+
+        <!--<item name="android:theme">@style/EditText_theme</item>-->
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+    </style>
+<style name="EditTextDash">
+        <item name="android:layout_width">@dimen/_100sdp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/et_height</item>
+        <item name="android:textColor">@color/theme</item>
+        <item name="android:textColorHint">@color/theme_gray1</item>
+        <item name="android:textSize">@dimen/et_text</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">@dimen/space5</item>
+
+        <!--<item name="android:theme">@style/EditText_theme</item>-->
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+    </style>
+
+    <!-- ImageView -->
+    <style name="ImageView_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/space5</item>
+    </style>
+
+    <!-- Checkbox -->
+    <style name="CheckBox_theme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/theme_gray1</item>
+        <item name="android:textSize">@dimen/text9</item>
+
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+        <!--<item name="android:button">@drawable/selector_checkbox</item>-->
+    </style>
+
+    <!-- Divider -->
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <!-- Tablayout -->
+    <style name="DefaultTab" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text9</item>
+        <item name="textAllCaps">true</item>
+
+        <item name="android:fontFamily">@font/font_opensans_semibold</item>
+    </style>
+
+    <!-- Popup menu -->
+    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/theme_gray1</item>
+        <item name="android:textSize">@dimen/text10</item>
+
+        <item name="android:fontFamily">@font/font_opensans_regular</item>
+    </style>
+</resources>

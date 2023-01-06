@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space1">@dimen/_1sdp</dimen>
+    <dimen name="space2">@dimen/_2sdp</dimen>
+    <dimen name="space3">@dimen/_3sdp</dimen>
+    <dimen name="space5">@dimen/_5sdp</dimen>
+    <dimen name="space8">@dimen/_8sdp</dimen>
+    <dimen name="space10">@dimen/_10sdp</dimen>
+    <dimen name="space12">@dimen/_12sdp</dimen>
+    <dimen name="space15">@dimen/_15sdp</dimen>
+    <dimen name="space20">@dimen/_20sdp</dimen>
+    <dimen name="space22">@dimen/_22sdp</dimen>
+    <dimen name="space25">@dimen/_25sdp</dimen>
+    <dimen name="space30">@dimen/_30sdp</dimen>
+    <dimen name="space40">@dimen/_40sdp</dimen>
+    <dimen name="space50">@dimen/_50sdp</dimen>
+    <dimen name="space80">@dimen/_80sdp</dimen>
+
+    <dimen name="size160">@dimen/_160sdp</dimen>
+    <dimen name="size120">@dimen/_120sdp</dimen>
+    <dimen name="size80">@dimen/_80sdp</dimen>
+    <dimen name="size70">@dimen/_70sdp</dimen>
+    <dimen name="size60">@dimen/_60sdp</dimen>
+    <dimen name="size50">@dimen/_50sdp</dimen>
+    <dimen name="size20">@dimen/_20sdp</dimen>
+    <dimen name="size15">@dimen/_15sdp</dimen>
+    <dimen name="size12">@dimen/_12sdp</dimen>
+
+    <dimen name="text12">@dimen/_13ssp</dimen>
+    <dimen name="text11">@dimen/_12ssp</dimen>
+    <dimen name="text10">@dimen/_11ssp</dimen>
+    <dimen name="text9">@dimen/_10ssp</dimen>
+    <dimen name="text8">@dimen/_9ssp</dimen>
+
+    <dimen name="shadow">@dimen/_2sdp</dimen>
+    <dimen name="border">1dp</dimen>
+    <dimen name="divider">0.5dp</dimen>
+    <dimen name="corner">@dimen/_8sdp</dimen>
+    <dimen name="corner_card">@dimen/_3sdp</dimen>
+    <dimen name="pb_size">@dimen/_55sdp</dimen>
+    <dimen name="iv_icon_size">@dimen/_25sdp</dimen>
+    <dimen name="iv_round_icon_size">@dimen/_30sdp</dimen>
+    <dimen name="timeline_width">@dimen/_60sdp</dimen>
+    <dimen name="timeline_circle">@dimen/_12sdp</dimen>
+    <dimen name="grid_size">@dimen/_50sdp</dimen>
+    <dimen name="badge_notification">@dimen/_7sdp</dimen>
+
+    <dimen name="tab_height">@dimen/_60sdp</dimen>
+    <dimen name="indicator_height">@dimen/_2sdp</dimen>
+
+    <dimen name="toolbar_height">@dimen/_40sdp</dimen>
+    <dimen name="toolbar_title_text">@dimen/_14ssp</dimen>
+
+    <dimen name="et_height">@dimen/_20sdp</dimen>
+    <dimen name="et_text">@dimen/_11ssp</dimen>
+    <dimen name="tip_text">@dimen/_10ssp</dimen>
+
+    <dimen name="btn_big_height">@dimen/_30sdp</dimen>
+    <dimen name="btn_small_height">@dimen/_25sdp</dimen>
+    <dimen name="btn_text">@dimen/_12ssp</dimen>
+</resources>
