@@ -55,7 +55,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/two_thoudsnd" />
+                            android:src="@drawable/two_thoudsnd"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/two_thousands_et"
@@ -99,7 +101,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/five_hundrade" />
+                            android:src="@drawable/five_hundrade"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/five_hundrade_et"
@@ -142,7 +146,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/two_hundrade" />
+                            android:src="@drawable/two_hundrade"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/two_hundrade_et"
@@ -186,7 +192,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/hundrade_one" />
+                            android:src="@drawable/hundrade_one"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/one_hundrade_et"
@@ -230,7 +238,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/fifty_one" />
+                            android:src="@drawable/fifty_one"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/fifty_et"
@@ -274,7 +284,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/twenty" />
+                            android:src="@drawable/twenty"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/twenty_et"
@@ -318,7 +330,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/ten_one" />
+                            android:src="@drawable/ten_one"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/ten_et"
@@ -361,7 +375,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/five" />
+                            android:src="@drawable/five"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/five_et"
@@ -405,7 +421,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/two" />
+                            android:src="@drawable/two"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/two_et"
@@ -448,7 +466,9 @@
                         <ImageView
                             android:layout_width="@dimen/_60sdp"
                             android:layout_height="@dimen/_45sdp"
-                            android:src="@drawable/one" />
+                            android:src="@drawable/one"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            />
 
                         <androidx.appcompat.widget.AppCompatEditText
                             android:id="@+id/one_et"
@@ -480,7 +500,6 @@
                             android:layout_marginLeft="@dimen/_3sdp"
                             android:id="@+id/final_one_result"
                             />
-
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </LinearLayout>
 

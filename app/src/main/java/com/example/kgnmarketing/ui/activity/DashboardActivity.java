@@ -56,6 +56,18 @@ public class DashboardActivity extends AppCompatActivity {
 
 
     }
+//    1.Implemenmt onbackpressed
+//    2. add user interaction
+//    logout option
+//    add share with date and user name
+//    [1] 2000*666=1332000₹
+//
+// Total Amount  1332000 ₹ (666 Notes)
+//  Thirteen Lakh Thirty Two Thousand
+//    add share application in apk format
+//    menu option
+//    add readme on github
+//
 
     private void finalResult() {
         String finalInputString = twoThousandStringFinal + fiveHundradeStringFinal + twoHundradeStringFinal +oneHundradeStringFinal +fiftyStringFinal + twentyStringFinal
@@ -177,8 +189,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.twoHundradeEt.addTextChangedListener(autoAddTextWatcher);
-
-
     }
 
 
@@ -221,8 +231,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.oneHundradeEt.addTextChangedListener(autoAddTextWatcher);
-
-
     }
 
     private void fifty() {
