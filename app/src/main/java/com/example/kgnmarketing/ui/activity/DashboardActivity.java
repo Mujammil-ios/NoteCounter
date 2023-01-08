@@ -2,13 +2,17 @@ package com.example.kgnmarketing.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.core.app.ShareCompat;
 import androidx.databinding.DataBindingUtil;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -16,6 +20,11 @@ import android.view.View;
 import com.example.kgnmarketing.R;
 import com.example.kgnmarketing.databinding.ActivityDashboardBinding;
 import com.example.kgnmarketing.object.core.EnglishNumberToWords;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class DashboardActivity extends AppCompatActivity {
         private final String TAG = getClass().getSimpleName();
@@ -43,6 +52,9 @@ public class DashboardActivity extends AppCompatActivity {
         String fiveStringFinal = "0";
         String twoStringFinal = "0";
         String oneStringFinal = "0";
+        String username;
+        String finalInputString;
+        String password;
 
 
 
@@ -56,7 +68,24 @@ public class DashboardActivity extends AppCompatActivity {
 
 
     }
-//    1.Implemenmt onbackpressed
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Closing Activity")
+                .setMessage("Are you sure you want to close this Screen?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
+    //    1.Implemenmt onbackpressed
 //    2. add user interaction
 //    logout option
 //    add share with date and user name
@@ -70,7 +99,7 @@ public class DashboardActivity extends AppCompatActivity {
 //
 
     private void finalResult() {
-        String finalInputString = twoThousandStringFinal + fiveHundradeStringFinal + twoHundradeStringFinal +oneHundradeStringFinal +fiftyStringFinal + twentyStringFinal
+        finalInputString = twoThousandStringFinal + fiveHundradeStringFinal + twoHundradeStringFinal +oneHundradeStringFinal +fiftyStringFinal + twentyStringFinal
                 +tenStringFinal + fiveStringFinal + twoStringFinal + oneStringFinal;
         try {
             twoThousandIntFinal = Integer.parseInt(twoThousandStringFinal);
@@ -105,10 +134,13 @@ public class DashboardActivity extends AppCompatActivity {
      */
     private void initToolbar() {
         layoutBinding.layoutToolbar.tvTitle.setText(getResources().getString(R.string.app_name));
-        layoutBinding.layoutToolbar.home.setVisibility(View.INVISIBLE);
-        layoutBinding.layoutToolbar.menu.setVisibility(View.VISIBLE);
-        layoutBinding.layoutToolbar.menu.setImageDrawable(getResources().getDrawable(R.drawable.ic_user));
-        layoutBinding.layoutToolbar.menu.setOnClickListener(new View.OnClickListener() {
+        layoutBinding.layoutToolbar.share.setVisibility(View.VISIBLE);
+        layoutBinding.layoutToolbar.clear.setVisibility(View.VISIBLE);
+        layoutBinding.layoutToolbar.log.setVisibility(View.VISIBLE);
+        layoutBinding.layoutToolbar.share.setImageDrawable(getResources().getDrawable(R.drawable.send));
+        layoutBinding.layoutToolbar.clear.setImageDrawable(getResources().getDrawable(R.drawable.delete));
+        layoutBinding.layoutToolbar.log.setImageDrawable(getResources().getDrawable(R.drawable.logout));
+        layoutBinding.layoutToolbar.log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -116,6 +148,7 @@ public class DashboardActivity extends AppCompatActivity {
                 SharedPreferences preferences = getSharedPreferences("login", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.remove("isUserLogin");
+                preferences.edit().clear();
                 editor.commit();
 
                 finish();
@@ -126,15 +159,13 @@ public class DashboardActivity extends AppCompatActivity {
 
             }
         });
-
-        /*layoutBinding.layoutToolbar.home.setOnClickListener(this);
-        layoutBinding.layoutToolbar.menu.setOnClickListener(this);*/
     }
 
     /**
      * initialize listener
      */
     private void initListener() {
+
         twoThousands();
         fiveHundrade();
         twoHundrade();
@@ -145,6 +176,46 @@ public class DashboardActivity extends AppCompatActivity {
         five();
         two();
         one();
+        SharedPreferences preferences = getSharedPreferences("login", Context.MODE_PRIVATE);
+        String username = preferences.getString("Username", "");
+        password = preferences.getString("Password", "");
+
+
+        layoutBinding.layoutToolbar.share.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                String return_val_in_english =   EnglishNumberToWords.convert(finalSum);
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd-HH-mm-ss", Locale.getDefault());
+                String currentDateandTime = sdf.format(new Date());
+
+                new ShareCompat
+                        .IntentBuilder(DashboardActivity.this)
+                        .setType("text/plain")
+                        .setChooserTitle("Share text with: ")
+                        .setText("From: " + username +"  " + "Date: " +currentDateandTime +"\n"+
+                                "Total Amount "+ Integer.toString(finalSum) + " ₹"+ "("+ finalNotes + " Notes" + ")" +"\n" + return_val_in_english)
+                        .startChooser();
+
+            }
+        });
+
+        layoutBinding.layoutToolbar.clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    layoutBinding.finalResult.setText(getString(R.string.zero));
+                    layoutBinding.oneEt.setText("0");
+                    layoutBinding.twoEt.setText("0");
+                    layoutBinding.fiveEt.setText("0");
+                    layoutBinding.tenEt.setText("0");
+                    layoutBinding.twentyEt.setText("0");
+                    layoutBinding.fiftyEt.setText("0");
+                    layoutBinding.oneHundradeEt.setText("0");
+                    layoutBinding.twoHundradeEt.setText("0");
+                    layoutBinding.fiveHundradeEt.setText("0");
+                    layoutBinding.twoThousandsEt.setText("0");
+            }
+        });
     }
 
     private void twoHundrade() {

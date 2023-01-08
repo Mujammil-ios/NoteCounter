@@ -50,6 +50,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
             }
         }, Constant.DELAY_SPLASH);
+        finish();
     }
 
     /**

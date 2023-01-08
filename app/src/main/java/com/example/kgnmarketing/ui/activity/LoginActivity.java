@@ -9,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -46,8 +47,8 @@ public class LoginActivity extends AppCompatActivity {
      * initialize listener
      */
     private void initListener() {
+       layoutBinding.etUsername.getText().toString();
         layoutBinding.etUsername.getText().toString();
-        layoutBinding.etPassword.getText().toString();
         layoutBinding.etPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
@@ -64,16 +65,12 @@ public class LoginActivity extends AppCompatActivity {
                 SharedPreferences preferences = getSharedPreferences("login", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putBoolean("isUserLogin", true);
-                editor.putString(layoutBinding.etUsername.toString(), "Username");
-                editor.putString(layoutBinding.etPassword.toString(), "Password");
-                editor.commit();
+                editor.putString("Username",layoutBinding.etUsername.getText().toString());
+                editor.putString("Password",layoutBinding.etUsername.getText().toString());
+                editor.apply();
                 Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-                intent.putExtra("Username", true);
-                intent.putExtra("Password", true);
                 startActivity(intent);
             }
         });
     }
-
-
 }

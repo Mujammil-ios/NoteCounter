@@ -25,15 +25,19 @@
             app:autoSizeTextType="uniform"/>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/menu"
+            android:id="@+id/share"
             style="@style/ImageView_icon"
             android:padding="@dimen/space10"
-            android:visibility="invisible"
-            app:srcCompat="@drawable/ic_arrow_left"/>
+            app:srcCompat="@drawable/send"/>
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/home"
+            android:id="@+id/clear"
             style="@style/ImageView_icon"
             android:padding="@dimen/space10"
-            app:srcCompat="@drawable/ic_arrow_left"/>
+            app:srcCompat="@drawable/delete"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/log"
+            style="@style/ImageView_icon"
+            android:padding="@dimen/space10"
+            app:srcCompat="@drawable/logout"/>
     </LinearLayout>
 </layout>
