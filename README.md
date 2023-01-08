@@ -11,7 +11,7 @@ Money Counter is a simple application to count your currency of various denomina
 DEMO Screenshots
 ---------------
 
-<img src='hhttps://github.com/Mujammil-ios/NoteCounter/blob/master/image/splash.png' width='200' height='400'> &nbsp; &nbsp; &nbsp; &nbsp;
+<img src='https://github.com/Mujammil-ios/NoteCounter/blob/master/image/splash.png' width='200' height='400'> &nbsp; &nbsp; &nbsp; &nbsp;
 <img src='https://github.com/Mujammil-ios/NoteCounter/blob/master/image/login.png' width='200' height='400'> &nbsp; &nbsp; &nbsp; &nbsp;
 <img src='https://github.com/Mujammil-ios/NoteCounter/blob/master/image/dash1.png' width='200' height='400'> &nbsp; &nbsp; &nbsp; &nbsp;
 <img src='https://github.com/Mujammil-ios/NoteCounter/blob/master/image/dash2.png' width='200' height='400'> &nbsp; &nbsp; &nbsp; &nbsp;
@@ -32,10 +32,10 @@ Getting Started
 Key-Features
 ----
 
-• Allows you to retain the denomination values.
-• Calculated values and results can be shared to social media, mail, messages and other sharing apps.
-• Currency formats according to language preferences.
-• Options to choose and remove denominations.
-• Automatic and accurate calculation.
-• Professional user interface.
-• Pleasant presentation.
+-Allows you to retain the denomination values.
+-Calculated values and results can be shared to social media, mail, messages and other sharing apps.
+-Currency formats according to language preferences.
+-Options to choose and remove denominations.
+-Automatic and accurate calculation.
+-Professional user interface.
+-Pleasant presentation.
