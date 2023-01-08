@@ -31,7 +31,6 @@ public class SplashActivity extends AppCompatActivity {
         navigateToNext();
     }
 
-
     /**
      * navigate to next
      */
@@ -50,7 +49,6 @@ public class SplashActivity extends AppCompatActivity {
                 }
             }
         }, Constant.DELAY_SPLASH);
-        finish();
     }
 
     /**
@@ -66,17 +64,4 @@ public class SplashActivity extends AppCompatActivity {
     private void initListener() {
 
     }
-
-    /**
-     * after login/registration save data and navigate
-     *
-     * @param object_user
-     *//*
-    private void saveData(UserModel object_user) {
-        PreferenceUtils.getInstance().setAuthToken(object_user.getChangeToken());
-        PreferenceUtils.getInstance().setUser(object_user);
-        PreferenceUtils.getInstance().setLoggedIn(true);
-
-        navigateToNext();
-    }*/
 }

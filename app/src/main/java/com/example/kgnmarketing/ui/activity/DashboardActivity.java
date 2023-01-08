@@ -1,7 +1,9 @@
 package com.example.kgnmarketing.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.PopupMenu;
 import androidx.core.app.ShareCompat;
 import androidx.databinding.DataBindingUtil;
 
@@ -11,10 +13,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.kgnmarketing.R;
@@ -57,16 +62,12 @@ public class DashboardActivity extends AppCompatActivity {
         String password;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard);
-
         initToolbar();
         initListener();
-
-
     }
     @Override
     public void onBackPressed() {
@@ -85,18 +86,8 @@ public class DashboardActivity extends AppCompatActivity {
                 .setNegativeButton("No", null)
                 .show();
     }
-    //    1.Implemenmt onbackpressed
-//    2. add user interaction
-//    logout option
-//    add share with date and user name
 //    [1] 2000*666=1332000₹
-//
-// Total Amount  1332000 ₹ (666 Notes)
-//  Thirteen Lakh Thirty Two Thousand
-//    add share application in apk format
-//    menu option
 //    add readme on github
-//
 
     private void finalResult() {
         finalInputString = twoThousandStringFinal + fiveHundradeStringFinal + twoHundradeStringFinal +oneHundradeStringFinal +fiftyStringFinal + twentyStringFinal
@@ -126,7 +117,6 @@ public class DashboardActivity extends AppCompatActivity {
             String return_val_in_english =   EnglishNumberToWords.convert(finalSum);
             layoutBinding.finalResult.setText("Total Amount "+ Integer.toString(finalSum) + " ₹"+ "("+ finalNotes + " Notes" + ")" + return_val_in_english);
         }
-
     }
 
     /**
@@ -143,20 +133,14 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.layoutToolbar.log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 SharedPreferences preferences = getSharedPreferences("login", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.remove("isUserLogin");
                 preferences.edit().clear();
                 editor.commit();
-
                 finish();
-
                 Intent intent = new Intent(DashboardActivity.this, LoginActivity.class);
                 startActivity(intent);
-
-
             }
         });
     }
@@ -165,7 +149,6 @@ public class DashboardActivity extends AppCompatActivity {
      * initialize listener
      */
     private void initListener() {
-
         twoThousands();
         fiveHundrade();
         twoHundrade();
@@ -179,7 +162,6 @@ public class DashboardActivity extends AppCompatActivity {
         SharedPreferences preferences = getSharedPreferences("login", Context.MODE_PRIVATE);
         String username = preferences.getString("Username", "");
         password = preferences.getString("Password", "");
-
 
         layoutBinding.layoutToolbar.share.setOnClickListener(new View.OnClickListener() {
 
@@ -216,8 +198,36 @@ public class DashboardActivity extends AppCompatActivity {
                     layoutBinding.twoThousandsEt.setText("0");
             }
         });
+        layoutBinding.layoutToolbar.more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Context wrapper = new ContextThemeWrapper(mActivity, R.style.PopupMenu);
+                PopupMenu popup = new PopupMenu(wrapper, view, Gravity.END);
+                popup.getMenuInflater().inflate(R.menu.menu_share, popup.getMenu());
+
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.menu_share_app:
+                                String url="https://takatakreview.blogspot.com/";
+                                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                                startActivity(intent);
+                                return true;
+                            default:
+                                return false;
+                        }
+                    }
+                });
+                popup.show();
+            }
+        });
     }
 
+    /**
+     * navigate to booking detail
+     *
+     * @param
+     */
     private void twoHundrade() {
 
         TextWatcher autoAddTextWatcher = new TextWatcher() {
@@ -249,7 +259,6 @@ public class DashboardActivity extends AppCompatActivity {
                     layoutBinding.finalTwoHundradeResult.setText(Integer.toString(twoHundraedeSum) + " ₹");
                     twoHundradeStringFinal = twoHundradeString;
                     finalResult();
-
                 }
             }
 
@@ -261,7 +270,6 @@ public class DashboardActivity extends AppCompatActivity {
         };
         layoutBinding.twoHundradeEt.addTextChangedListener(autoAddTextWatcher);
     }
-
 
     private void oneHundrade() {
 
@@ -306,7 +314,6 @@ public class DashboardActivity extends AppCompatActivity {
 
     private void fifty() {
 
-
         TextWatcher autoAddTextWatcher = new TextWatcher() {
             private String oldText = "";
             private String newText = "";
@@ -346,13 +353,9 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.fiftyEt.addTextChangedListener(autoAddTextWatcher);
-
     }
 
     private void twenty() {
-
-
-
         TextWatcher autoAddTextWatcher = new TextWatcher() {
             private String oldText = "";
             private String newText = "";
@@ -391,8 +394,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.twentyEt.addTextChangedListener(autoAddTextWatcher);
-
-
     }
 
     private void ten() {
@@ -435,12 +436,7 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.tenEt.addTextChangedListener(autoAddTextWatcher);
-
-
-
     }
-
-
 
     private void two() {
         TextWatcher autoAddTextWatcher = new TextWatcher() {
@@ -472,9 +468,7 @@ public class DashboardActivity extends AppCompatActivity {
                     layoutBinding.twoResult.setText(Integer.toString(twoSum) + " ₹");
                     twoStringFinal = twoString;
                     finalResult();
-
                 }
-
             }
 
             @Override
@@ -482,9 +476,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.twoEt.addTextChangedListener(autoAddTextWatcher);
-
-
-
     }
 
     private void one() {
@@ -526,7 +517,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.oneEt.addTextChangedListener(autoAddTextWatcher);
-
     }
 
     private void five() {
@@ -560,23 +550,18 @@ public class DashboardActivity extends AppCompatActivity {
                     layoutBinding.finalFiveResult.setText(Integer.toString(fiveSum) + " ₹");
                     fiveStringFinal = fiveString;
                     finalResult();
-
                 }
-
             }
-
             @Override
             public void afterTextChanged(Editable s) {
             }
         };
 
         layoutBinding.fiveEt.addTextChangedListener(autoAddTextWatcher);
-
     }
 
     // a public method to perform multiplication
     public void twoThousands() {
-
 
         TextWatcher autoAddTextWatcher = new TextWatcher() {
             private String oldText = "";
@@ -609,9 +594,7 @@ public class DashboardActivity extends AppCompatActivity {
                     layoutBinding.finalTwoThousandResultTv.setText(Integer.toString(twoThousandSum) + " ₹");
                     twoThousandStringFinal = twoThousandString;
                     finalResult();
-
                 }
-
             }
 
             @Override
@@ -619,8 +602,6 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.twoThousandsEt.addTextChangedListener(autoAddTextWatcher);
-
-
     }
 
     // a public method to perform multiplication
@@ -663,8 +644,5 @@ public class DashboardActivity extends AppCompatActivity {
             }
         };
         layoutBinding.fiveHundradeEt.addTextChangedListener(autoAddTextWatcher);
-
-        //checkAndClear();
-        // get the input number
     }
 }

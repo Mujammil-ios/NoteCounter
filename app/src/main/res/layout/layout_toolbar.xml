@@ -35,6 +35,13 @@
             android:padding="@dimen/space10"
             app:srcCompat="@drawable/delete"/>
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/more"
+            style="@style/ImageView_icon"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/space5"
+            android:padding="@dimen/space5"
+            app:srcCompat="@drawable/more_circle" />
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/log"
             style="@style/ImageView_icon"
             android:padding="@dimen/space10"
