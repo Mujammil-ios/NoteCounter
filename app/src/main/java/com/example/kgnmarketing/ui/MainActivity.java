@@ -28,15 +28,11 @@ public class MainActivity extends AppCompatActivity {
         layoutBinding.hello.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                     SharedPreferences preferences = getSharedPreferences("login", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.remove("isUserLogin");
                     editor.commit();
-
                     finish();
-
                     Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     startActivity(intent);
 

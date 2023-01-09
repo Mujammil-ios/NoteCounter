@@ -27,7 +27,6 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_splash);
-
         navigateToNext();
     }
 
@@ -36,7 +35,6 @@ public class SplashActivity extends AppCompatActivity {
      */
     private void navigateToNext() {
         SharedPreferences preferences = getSharedPreferences("login", Context.MODE_PRIVATE);
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -49,19 +47,5 @@ public class SplashActivity extends AppCompatActivity {
                 }
             }
         }, Constant.DELAY_SPLASH);
-    }
-
-    /**
-     * initialize toolbar
-     */
-    private void initToolbar() {
-
-    }
-
-    /**
-     * initialize listener
-     */
-    private void initListener() {
-
     }
 }

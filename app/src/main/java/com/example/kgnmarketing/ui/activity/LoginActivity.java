@@ -32,15 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         layoutBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
-        initToolbar();
         initListener();
-    }
-
-    /**
-     * initialize toolbar
-     */
-    private void initToolbar() {
-
     }
 
     /**

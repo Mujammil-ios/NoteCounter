@@ -3,5 +3,4 @@
     <item
         android:id="@+id/menu_share_app"
         android:title="@string/share_app"/>
-
 </menu>

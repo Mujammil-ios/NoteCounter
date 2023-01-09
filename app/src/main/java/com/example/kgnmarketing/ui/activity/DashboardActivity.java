@@ -224,9 +224,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     /**
-     * navigate to booking detail
-     *
-     * @param
+     * initialize edittext
      */
     private void twoHundrade() {
 
@@ -271,6 +269,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.twoHundradeEt.addTextChangedListener(autoAddTextWatcher);
     }
 
+    /**
+     * initialize edittext
+     */
     private void oneHundrade() {
 
         TextWatcher autoAddTextWatcher = new TextWatcher() {
@@ -312,6 +313,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.oneHundradeEt.addTextChangedListener(autoAddTextWatcher);
     }
 
+    /**
+     * initialize edittext
+     */
     private void fifty() {
 
         TextWatcher autoAddTextWatcher = new TextWatcher() {
@@ -355,6 +359,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.fiftyEt.addTextChangedListener(autoAddTextWatcher);
     }
 
+    /**
+     * initialize edittext
+     */
     private void twenty() {
         TextWatcher autoAddTextWatcher = new TextWatcher() {
             private String oldText = "";
@@ -396,6 +403,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.twentyEt.addTextChangedListener(autoAddTextWatcher);
     }
 
+    /**
+     * initialize edittext
+     */
     private void ten() {
 
         TextWatcher autoAddTextWatcher = new TextWatcher() {
@@ -438,6 +448,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.tenEt.addTextChangedListener(autoAddTextWatcher);
     }
 
+    /**
+     * initialize edittext
+     */
     private void two() {
         TextWatcher autoAddTextWatcher = new TextWatcher() {
             private String oldText = "";
@@ -478,6 +491,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.twoEt.addTextChangedListener(autoAddTextWatcher);
     }
 
+    /**
+     * initialize edittext
+     */
     private void one() {
         TextWatcher autoAddTextWatcher = new TextWatcher() {
             private String oldText = "";
@@ -519,6 +535,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.oneEt.addTextChangedListener(autoAddTextWatcher);
     }
 
+    /**
+     * initialize edittext
+     */
     private void five() {
 
         TextWatcher autoAddTextWatcher = new TextWatcher() {
@@ -560,8 +579,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.fiveEt.addTextChangedListener(autoAddTextWatcher);
     }
 
-    // a public method to perform multiplication
-    public void twoThousands() {
+    /**
+     * initialize edittext
+     */    public void twoThousands() {
 
         TextWatcher autoAddTextWatcher = new TextWatcher() {
             private String oldText = "";
@@ -604,7 +624,9 @@ public class DashboardActivity extends AppCompatActivity {
         layoutBinding.twoThousandsEt.addTextChangedListener(autoAddTextWatcher);
     }
 
-    // a public method to perform multiplication
+    /**
+     * initialize edittext
+     */
     public void fiveHundrade() {
 
 
