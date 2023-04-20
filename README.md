@@ -33,9 +33,16 @@ Key-Features
 ----
 
 -Allows you to retain the denomination values.
+
 -Calculated values and results can be shared to social media, mail, messages and other sharing apps.
+
 -Currency formats according to language preferences.
+
 -Options to choose and remove denominations.
+
 -Automatic and accurate calculation.
+
 -Professional user interface.
+
 -Pleasant presentation.
+
